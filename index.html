@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+        <h1>APP Todo-list</h1>
+    <form id="todo-form"></form>
+    <fieldset>
+        <input type="text" id="todo-input" placeholder="Entre com um intem" required>
+        <button type="submit">+ Adicionar</button>
+    </fieldset>
+    
+    <ul id="todo-list"></ul>
+    <script src="app.js"></script>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/service-worker.js').
+            then(regitration =>{ocnsole.log('Serviço Iniciado',regitration.scope);}).
+            catchc(error => {console.log('Falha na inicialização do serviço'),error});
+         }
+    </script>
+
+    
+</body>
+</html>
